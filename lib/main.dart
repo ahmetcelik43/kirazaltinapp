@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       900: Color.fromRGBO(223, 195, 70, 1),
     };
     return MaterialApp(
-      title: 'Flutter Code Sample for material.Scaffold',
+      title: 'Kiraz Altın',
       theme: ThemeData(
           fontFamily: "Poppins",
           primarySwatch: MaterialColor(int.parse("0xffdfc346"), color)),

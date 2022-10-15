@@ -154,7 +154,7 @@ class _HomePageUIState extends State<AltinPage> {
                                         height: 20, width: 20),
                                   ),
                                   SizedBox(
-                                      width: 100,
+                                      width: 90,
                                       child: Text(
                                         data[key]["BASLIK"]
                                             .toString()

@@ -154,7 +154,7 @@ class _HomePageUIState extends State<DovizPage> {
                                         height: 20, width: 20),
                                   ),
                                   SizedBox(
-                                      width: 150,
+                                      width: 100,
                                       child: Text(
                                         data[key]["BASLIK"]
                                             .toString()

@@ -77,17 +77,18 @@ class UrunUI extends StatelessWidget with ChangeNotifier {
 
   @override
   Widget _buildUrun(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
       child: FutureBuilder<List<dynamic>>(
         future: fetchUsers(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
-            return Padding(
-                padding: EdgeInsets.all(5),
-                child: SingleChildScrollView(
+            return SingleChildScrollView(
+                child: Padding(
+                    padding: EdgeInsets.all(5),
                     child: GridView.builder(
+                        physics: ScrollPhysics(),
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            childAspectRatio: 1,
+                            childAspectRatio: 1.2,
                             crossAxisCount:
                                 (MediaQuery.of(context).size.width ~/ 250)
                                     .toInt()),
@@ -202,9 +203,7 @@ class UrunUI extends StatelessWidget with ChangeNotifier {
                         fontWeight: FontWeight.bold, fontSize: 20)),
               ),
             ),
-            Expanded(
-              child: _buildUrun(context),
-            )
+            Expanded(child: SingleChildScrollView(child: _buildUrun(context)))
           ],
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
         ));
